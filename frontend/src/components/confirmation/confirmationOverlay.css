@@ -1,0 +1,60 @@
+.overlay {
+    position: fixed;
+    /* Fix the overlay to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black background */
+    display: flex;
+    /* Allow for centered content */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+    z-index: 100;
+    /* High z-index to appear above other elements */
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;
+    /* Smooth transition on show/hide */
+}
+
+.overlay.active {
+    opacity: 1;
+    /* Show the overlay when active */
+}
+
+.close-btn {
+    position: absolute;
+    /* Absolute positioning within the overlay */
+    top: 20px;
+    /* Adjust for spacing from top */
+    right: 20px;
+    /* Adjust for spacing from right */
+}
+
+.confirmation-card {
+    border-radius: 0px;
+    width: 80%;
+    position: relative;
+    top: 60px;
+    justify-content: center;
+}
+
+.confirmation-text {
+    margin-top: 5px !important;
+    text-align: center !important;
+}
+
+.viewButton {
+    text-align: center !important;
+    width: 300px;
+    border-radius: 0px;
+    margin-left: 300px !important;
+    padding-left: 40px;
+    padding-right: 40px;
+}
